@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painkillers</title>
+    <link rel="stylesheet" href="substyle.css">
+
+    <style>
+      /* Warning */
+      .warning {
+            background-color: #f44336;
+            color: #fff;
+            padding: 7px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 999; 
+        }
+        body{
+            background-image: url("other_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* Dark mode overlay */
+        body.dark-mode::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65); 
+            z-index: -1; 
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+      <div class="info-box">
+            <h1>Painkillers</h1>
+        </div>
+        
+        <div class="description">
+          <h2><p>Basic Information about Painkillers</p></h2>
+            <ul>
+                <li>Pain relievers are medicines that reduce or relieve headaches, sore muscles, arthritis, or other aches and pains. There are many different pain medicines, and each one has advantages and risks. Some types of pain respond better to certain medicines than others. Each person may also have a slightly different response to a pain reliever.</li>
+                <li>If OTC medicines don't relieve your pain, your doctor may prescribe something stronger. Many NSAIDs are also available at higher prescription doses. The most powerful pain relievers are opioids. They are very effective, but they can sometimes have serious side effects. There is also a risk of addiction. Because of the risks, you must use them only under a doctor's supervision.</li>
+            </ul>
+        </div>
+
+        <ol class="medicines">
+            <li class="medicine">
+                <h2>Crocin</h2>
+                <img src="crocin_img.jfif" alt="Crocin" height="200" width="200">
+
+                <div class="info">
+                    <ul>
+                        <li><strong>Product Information and Benefits</strong></li>
+                        <p>Crocin Advance 500mg Tablet helps relieve pain and fever by blocking the release of certain chemical messengers responsible for fever and pain. It is used to treat headaches, migraine, toothaches, sore throats, period (menstrual) pains, arthritis, muscle aches, and the common cold. Crocin Advance 500mg Tablet is widely prescribed and considered safe but is not suitable for everybody. Before taking it, let your doctor know if you have liver or kidney problems or are using blood-thinning medicines. It may affect the dose or suitability of this medicine. Let your doctor know about all the other medicines you are taking because they may affect, or be affected by, this medicine.</p>
+                        <li><strong>Uses of Crocin</strong></li>
+                        <p>
+                            <ul>
+                                <li>Pain relief</li>
+                                <li>Treatment of Fever</li>
+                            </ul>
+                        </p>
+                        <li><strong>Side Effects of Crocin</strong></li>
+                        <p>Side effects are very rare but most side effects do not require any medical attention and disappear as your body adjusts to the medicine. Consult your doctor if they persist or if you’re worried about them.</p>
+                        <ul>
+                            <li>Common side effects of Crocin</li>
+                            <ol>
+                                <li>Stomach pain</li>
+                                <li>Nausea</li>
+                                <li>Vomiting</li>
+                            </ol>
+                        </ul>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="medicine">
+                <h2>Ibuprofen</h2>
+                <img src="ibuprofen_img.jfif" alt="Ibuprofen" height="200" width="200">
+                <div class="info">
+                    <ul>
+                        <li><strong>Product Information and Benefits</strong></li>
+                        <p>Brufen 400 Tablet is a pain-relieving medicine. It is used to treat many conditions such as headache, fever, period pain, toothache, colds, and mild arthritis. It is also a common ingredient in many cold and flu remedies. Brufen 400 Tablet should be taken with food to avoid stomach upset and reduce side effects. In general, you should try to use the smallest amount necessary to control your symptoms, for the shortest possible time. You should take this medicine regularly while you need it. Try not to miss doses as it will become less effective if you do. This medicine is widely prescribed and considered safe but is not suitable for everybody. Before you take it, you should tell your doctor if you have kidney problems, asthma, blood disorders, or drink a lot of alcohol. Also, tell your doctor what other medicines you are taking to make sure you are safe. It is best to avoid drinking alcohol while using this medicine.</p>
+                        <li><strong>Uses of Ibuprofen</strong></li>
+                        <p>
+                            <ul>
+                                <li>Pain relief</li>
+                                <li>Treatment of Fever</li>
+                            </ul>
+                        </p>
+                        <li><strong>Side Effects of Ibuprofen</strong></li>
+                        <p>Most side effects do not require any medical attention and disappear as your body adjusts to the medicine. Consult your doctor if they persist or if you’re worried about them. Side effects may also depend on who is taking the medicine.</p>
+                        <ul>
+                            <li>Common side effects of Ibuprofen</li>
+                            <ol>
+                                <li>Vomiting</li>
+                                <li>Nausea</li>
+                                <li>Dizziness</li>
+                                <li>Abdominal pain</li>
+                                <li>Constipation</li>
+                                <li>Flatulence</li>
+                                <li>Diarrhea</li>
+                                <li>Dyspepsia</li>
+                                <li>Headache</li>
+                                <li>Fatigue</li>
+                                <li>Rash</li>
+                            </ol>
+                        </ul>
+                    </ul>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+    <div class="warning">We are not responsible for any untoward side effects by consuming unprescribed medicine. Please consult your doctor before.</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemdSure</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Additional CSS for coloring the lines and changing font color */
+    .line-above,
+    .line-below {
+        background-color: #00aeff; 
+        height: 2px; 
+        margin: 0 0; 
+    }
+
+    /* TO change font color between the lines */
+    .home-text h2 {
+        color: #ffffff; 
+        background-color: #00aeff; 
+    }
+
+    /* Warning */
+    .warning {
+        background-color: #f44336;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999; 
+    }
+
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-bottom: 20px; 
+        margin-bottom: 20px; 
+        position: relative;
+        background-image: url("other_background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* Centering the logo and text */
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
+
+    /* Logo style */
+    .logo {
+        height: 100px; /* Adjust height as needed */
+        width: 100px; /* Adjust width as needed */
+        align-items: center;
+    }
+
+    /* Text style */
+    .logo-text {
+        margin-left: 10px; /* Adjust margin as needed */
+        font-size: 48px; /* Adjust font size as needed */
+    }
+
+    /* CSS for arranging images side by side */
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+
+    /* Ensure images and maps fill the container */
+    .column img,
+    .column map {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+        background-color: #333;
+        color: #fff;
+    }
+
+    /* To add dark mode styles */
+    body.dark-mode header {
+        background-color: #2ad3dc;
+        color: #000000;
+    }
+
+    body.dark-mode .line-above,
+    body.dark-mode .line-below {
+        background-color: #00aeff; 
+    }
+
+    body.dark-mode footer {
+        background-color: #444;
+    }
+
+    /* Dark mode toggle */
+    .dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Dark mode overlay */
+    body.dark-mode::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65); 
+        z-index: -1; 
+    }
+    </style>
+</head>
+<body>
+<!-- Dark mode toggle button in the header -->
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+<!-- Logo and text -->
+<div class="logo-container">
+    <img src="logo.jfif" class="logo" alt="Logo">
+    <span class="logo-text">RemdSure</span>
+</div>
+
+<section class="home" id="home">
+    <div class="home-text">
+        <div class="line-above"></div> <!-- Line above the heading -->
+        <h2>The ultimate encyclopedia for medicines</h2>
+        <div class="line-below"></div> <!-- Line below the heading -->
+    </div>
+    <div class="home-img"></div>
+</section>
+
+<!-- Medicine List -->
+
+
+<div class="row">
+    <div class="column">
+        <img src="painkiller_alt_alt.jpeg" alt="Painkillers" style="width:100%" usemap="#image-map-painkiller-alt">
+        <map name="image-map-painkiller-alt">
+            <area target="" alt="" title="" href="painkillers.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+
+    <div class="column">
+        <img src="antibiotics_alt_alt.jpeg" alt="Antibiotics" style="width:100%" usemap="#image-map-antibiotics-alt">
+        <map name="image-map-antibiotics-alt">
+            <area target="" alt="" title="" href="antibiotics.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+
+    <div class="column">
+        <img src="antacids_alt_alt.jpeg" alt="Antacids" style="width:100%" usemap="#image-map-antacids-alt">
+        <map name="image-map-antacids-alt">
+            <area target="" alt="" title="" href="antacids.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+
+    
+    <!-- Add more columns for additional medicine categories -->
+</div>
+
+<div class="row">
+    <div class="column">
+        <img src="contraceptives_alt_alt.jpeg" alt="Contraceptives" style="width:90%" usemap="#image-map-contraceptives-alt">
+        <map name="image-map-contracpetives-alt">
+            <area target="" alt="" title="" href="contraceptives.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+    <div class="column">
+        <img src="contraceptives_alt_alt.jpeg" alt="Contraceptives" style="width:90%" usemap="#image-map-contraceptives-alt">
+        <map name="image-map-contracpetives-alt">
+            <area target="" alt="" title="" href="contraceptives.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+    <div class="column">
+        <img src="contraceptives_alt_alt.jpeg" alt="Contraceptives" style="width:90%" usemap="#image-map-contraceptives-alt">
+        <map name="image-map-contracpetives-alt">
+            <area target="" alt="" title="" href="contraceptives.html" coords="0,4,273,182" shape="rect">
+        </map>
+    </div>
+</div>
+
+<footer>
+    <!-- About Us link -->
+    <a href="#" class="about-link">About Us</a> 
+    <!-- Learn More link -->
+    <a href="#" class="b">Learn More</a>
+</footer>
+
+<!-- Footer end -->
+
+<!-- Warning text -->
+<div class="warning">We are not responsible for any untoward side effects by consuming unprescribed medicine. Please consult your doctor before.</div>
+
+<!-- Javascript for dark mode toggle -->
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
